@@ -11,26 +11,35 @@
     <div class="container">
         <h1>Color Picker Survey</h1>
         <form id="surveyForm" action="https://formsubmit.co/enciuradumatei@gmail.com" method="POST">
+            <!-- Add a hidden field for FormSubmit to disable spam protection confirmation -->
+            <input type="hidden" name="_captcha" value="false">
+
             <div class="question">
                 <h2>Question 1: Choose a color for this image</h2>
                 <img src="https://via.placeholder.com/150" alt="Placeholder Image 1" class="question-image">
-                <input type="color" class="color-input" data-question="1" value="#ff0000">
+                <!-- Add name attribute to capture data -->
+                <input type="color" name="color1" class="color-input" data-question="1" value="#ff0000">
             </div>
+
             <div class="question">
                 <h2>Question 2: Choose a color for this image</h2>
                 <img src="https://via.placeholder.com/150" alt="Placeholder Image 2" class="question-image">
-                <input type="color" class="color-input" data-question="2" value="#00ff00">
+                <!-- Add name attribute to capture data -->
+                <input type="color" name="color2" class="color-input" data-question="2" value="#00ff00">
             </div>
+
             <div class="question">
                 <h2>Question 3: Choose a color for this image</h2>
                 <img src="https://via.placeholder.com/150" alt="Placeholder Image 3" class="question-image">
-                <input type="color" class="color-input" data-question="3" value="#0000ff">
+                <!-- Add name attribute to capture data -->
+                <input type="color" name="color3" class="color-input" data-question="3" value="#0000ff">
             </div>
+
             <button type="submit">Submit</button>
         </form>
         <div id="results"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
